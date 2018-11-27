@@ -76,13 +76,13 @@ container_pull(
 new_http_archive(
     name = "helm_darwin",
     sha256 = "7c4e6bfbc211d6b984ffb4fa490ce9ac112cc4b9b8d859ece27045b8514c1ed1",
-    urls = ["https://storage.googleapis.com/kubernetes-helm/helm-v2.10.0-darwin-amd64.tar.gz"],
+    urls = ["https://storage.googleapis.com/kubernetes-helm/helm-v2.10.0-darwin-arm.tar.gz"],
     build_file_content =
         """
 filegroup(
     name = "file",
     srcs = [
-        "darwin-amd64/helm",
+        "darwin-arm/helm",
     ],
     visibility = ["//visibility:public"],
 )
@@ -92,13 +92,13 @@ filegroup(
 new_http_archive(
     name = "helm_linux",
     sha256 = "0fa2ed4983b1e4a3f90f776d08b88b0c73fd83f305b5b634175cb15e61342ffe",
-    urls = ["https://storage.googleapis.com/kubernetes-helm/helm-v2.10.0-linux-amd64.tar.gz"],
+    urls = ["https://storage.googleapis.com/kubernetes-helm/helm-v2.10.0-linux-arm.tar.gz"],
     build_file_content =
         """
 filegroup(
     name = "file",
     srcs = [
-        "linux-amd64/helm",
+        "linux-arm/helm",
     ],
     visibility = ["//visibility:public"],
 )
@@ -132,14 +132,14 @@ http_file(
     name = "dep_darwin",
     executable = 1,
     sha256 = "1a7bdb0d6c31ecba8b3fd213a1170adf707657123e89dff234871af9e0498be2",
-    urls = ["https://github.com/golang/dep/releases/download/v0.5.0/dep-darwin-amd64"],
+    urls = ["https://github.com/golang/dep/releases/download/v0.5.0/dep-darwin-arm"],
 )
 
 http_file(
     name = "dep_linux",
     executable = 1,
     sha256 = "287b08291e14f1fae8ba44374b26a2b12eb941af3497ed0ca649253e21ba2f83",
-    urls = ["https://github.com/golang/dep/releases/download/v0.5.0/dep-linux-amd64"],
+    urls = ["https://github.com/golang/dep/releases/download/v0.5.0/dep-linux-arm"],
 )
 
 ## Brodocs and associated dependencies

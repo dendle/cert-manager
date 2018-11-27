@@ -25,7 +25,7 @@ def stamped_image(
       name = "%s.app" % name,
       base = base,
       embed = [":go_default_library"],
-      goarch = "amd64",
+      goarch = "arm",
       goos = "linux",
       pure = "on",
   )
